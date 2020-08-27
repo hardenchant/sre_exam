@@ -1,35 +1,48 @@
 import sys
 
 
-class CollacHypothesis:
-    def __init__(self):
-        # кэшируем результаты
-        self.cache = dict()
+def eratosthenes(n):
+    """
+    Get all primes from 1 to n. 0 if not prime, else number
+    :param n:
+    :return: [0, 2, 3, ..., n]
+    """
+    sieve = list(range(n + 1))
+    sieve[1] = 0
+    for i in sieve:
+        if i > 1:
+            for j in range(i + i, len(sieve), i):
+                sieve[j] = 0
+    return [i for i in sieve[1:] if i != 0]
 
-    def get_p(self, num):
-        cached = self.cache.get(num, None)
-        if cached is not None:
-            return cached
-        if num == 1:
-            return 0
-        if num % 2:
-            # нечет
-            next_num = 3 * num + 1
-        else:
-            # чет
-            next_num = num / 2
-        p = self.get_p(next_num) + 1
-        self.cache[num] = p
-        return p
 
-    def get_interval_sum(self, l, r):
-        return sum([self.get_p(i) for i in list(reversed(range(l, r + 1)))])
+def is_exists_sublist_k_with_c_primes(primes_list, k, c):
+    """
+    Is exists sublist of len `k` with `c` primes
+    :param primes_list:
+    :param k:
+    :param c:
+    :return: -1 if not exists else first sublist number
+    """
+    if c > len(primes_list):
+        return -1
+
+    for start_point in range(len(primes_list) - c):
+        sublist = primes_list[start_point: start_point + c]
+        if sublist[-1] - sublist[0] <= k:
+            return sublist[0]
+    return -1
 
 
 def main():
-    l, r = [int(i) for i in sys.stdin.readline().strip().split(' ')]
-    ch = CollacHypothesis()
-    sys.stdout.write(str(ch.get_interval_sum(l, r)))
+    kcs = []
+    for _ in range(int(sys.stdin.readline().strip())):
+        kcs.append(
+            [int(i) for i in sys.stdin.readline().strip().split(' ')]
+        )
+    primes_list = eratosthenes(10 ** 5)
+    for k, c in kcs:
+        sys.stdout.write(str(is_exists_sublist_k_with_c_primes(primes_list, k, c)) + '\n')
 
 
 if __name__ == "__main__":
