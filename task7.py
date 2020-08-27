@@ -27,7 +27,7 @@ def is_exists_sublist_k_with_c_primes(primes_list, k, c):
     if c > len(primes_list):
         return -1
 
-    for start_point in range(len(primes_list) - c):
+    for start_point in range(len(primes_list) - c + 1):
         sublist = primes_list[start_point: start_point + c]
         if sublist[-1] - sublist[0] <= k:
             return sublist[0]
