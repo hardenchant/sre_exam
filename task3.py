@@ -126,6 +126,8 @@ class ConvexPoly:
         for point_from_poly1, point_from_poly2 in product(self.points, other_poly.points):
             b1 = self._get_b_for_point_or_x(point_from_poly1)
             b2 = other_poly._get_b_for_point_or_x(point_from_poly2)
+            if b1 == b2:
+                return True
             if is_first_higher is None:
                 is_first_higher = b1 > b2
             elif (b1 > b2) != is_first_higher:
