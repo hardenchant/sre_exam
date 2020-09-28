@@ -12,16 +12,38 @@ time (cat task3.test1.txt | python task3.py)
 
 ### Tasks
 
-![task01](task01.jpg)
 
-![task02](task02.jpg)
+<details>
+  <summary>Task1</summary>
+  ![task01](task01.jpg)
+</details>
 
-![task03](task03.jpg)
+<details>
+  <summary>Task2</summary>
+  ![task02](task02.jpg)
+</details>
 
-![task04](task04.jpg)
+<details>
+  <summary>Task3</summary>
+  ![task03](task03.jpg)
+</details>
 
-![task05](task05.jpg)
+<details>
+  <summary>Task4</summary>
+  ![task04](task04.jpg)
+</details>
 
-![task06](task06.jpg)
+<details>
+  <summary>Task5</summary>
+  ![task05](task05.jpg)
+</details>
 
-![task07](task07.jpg)
+<details>
+  <summary>Task6</summary>
+  ![task06](task06.jpg)
+</details>
+
+<details>
+  <summary>Task7</summary>
+  ![task07](task07.jpg)
+</details>
