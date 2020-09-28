@@ -15,35 +15,49 @@ time (cat task3.test1.txt | python task3.py)
 
 <details>
   <summary>Task1</summary>
-  ![task01](task01.jpg)
+  <p align="center">
+    <img width="50%" height="50%" src="./task01.jpg">
+  </p>
 </details>
 
 <details>
   <summary>Task2</summary>
-  ![task02](task02.jpg)
+  <p align="center">
+    <img width="50%" height="50%" src="./task02.jpg">
+  </p>
 </details>
 
 <details>
   <summary>Task3</summary>
-  ![task03](task03.jpg)
+  <p align="center">
+    <img width="50%" height="50%" src="./task03.jpg">
+  </p>
 </details>
 
 <details>
   <summary>Task4</summary>
-  ![task04](task04.jpg)
+  <p align="center">
+    <img width="50%" height="50%" src="./task04.jpg">
+  </p>
 </details>
 
 <details>
   <summary>Task5</summary>
-  ![task05](task05.jpg)
+  <p align="center">
+    <img width="50%" height="50%" src="./task05.jpg">
+  </p>
 </details>
 
 <details>
   <summary>Task6</summary>
-  ![task06](task06.jpg)
+  <p align="center">
+    <img width="50%" height="50%" src="./task06.jpg">
+  </p>
 </details>
 
 <details>
   <summary>Task7</summary>
-  ![task07](task07.jpg)
+  <p align="center">
+    <img width="50%" height="50%" src="./task07.jpg">
+  </p>
 </details>
