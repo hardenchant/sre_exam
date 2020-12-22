@@ -1,4 +1,4 @@
-## SRE programming exam for Tinkoff company
+## SRE programming exam
 
 Python3.6 was used.
 
